@@ -4,6 +4,8 @@
 
 VirgilDrive is a computer vision project I'm building to detect prolonged eye closure and alert a driver when drowsiness is detected.
 
+![VirgilDrive running](assets/virgildrive-demo.png)
+
 The current prototype uses a webcam, OpenCV, and MediaPipe Face Landmarker to track the driver's eyes in real time.
 
 ## How it works
