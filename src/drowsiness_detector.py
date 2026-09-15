@@ -49,7 +49,6 @@ def main():
     drowsiness_threshold = 2.0
     eyes_closed_start = None
     drowsiness_detected = False
-    ear_values = []
 
     cap = cv2.VideoCapture(0)
     if not cap.isOpened():
@@ -91,7 +90,6 @@ def main():
                 vertical_2 = distance(p3, p5)
                 horizontal = distance(p1, p4)
                 ear = (vertical_1 + vertical_2) / (2 * horizontal)
-                ear_values.append(ear)
 
                 if ear < ear_threshold:
                     if eyes_closed_start is None:
@@ -139,14 +137,6 @@ def main():
 
     cap.release()
     cv2.destroyAllWindows()
-
-    if ear_values:
-        print("\nEAR Statistics")
-        print("Minimum EAR:", min(ear_values))
-        print("Maximum EAR:", max(ear_values))
-        print("Average EAR:", sum(ear_values) / len(ear_values))
-        print("Number of samples:", len(ear_values))
-
 
 if __name__ == "__main__":
     main()
