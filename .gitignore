@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.DS_Store
+.vscode/
+.idea/
+*.log
+
+# Keep the model file tracked
+!assets/
+!assets/face_landmarker.task
